@@ -1,0 +1,29 @@
+.img {
+  width: 60px;
+  height: 60px;
+  padding: 7px;
+  margin-bottom: 20px;
+  background-color: rgb(236, 219, 219);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 1px 2px 1px, rgba(0, 0, 0, 0.14) 1px 2px 2px,
+    rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+.text {
+  font-size: 19px;
+  line-height: 1.54;
+  margin-bottom: 10px;
+}
+
+.textStatus {
+  font-size: 19px;
+  line-height: 1.54;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
