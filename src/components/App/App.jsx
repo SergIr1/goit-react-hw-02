@@ -1,7 +1,7 @@
 import './App.module.css';
 import { useState, useEffect } from 'react';
 
-import AppBar from '../AppBar/AppBar';
+import Description from '../Description/Description';
 import Options from '../Options/Options';
 import Feedback from '../Feedback/Feedback';
 import Notification from '../Notification/Notification';
@@ -28,7 +28,9 @@ export default function App() {
   });
   const feedbackTyps = ['good', 'neutral', 'bad'];
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
-  const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
+  const positiveFeedback = totalFeedback
+    ? Math.round((feedback.good / totalFeedback) * 100)
+    : 0;
 
   const updateFeedback = feedbackType => {
     setFeedback({
@@ -47,7 +49,7 @@ export default function App() {
 
   return (
     <>
-      <AppBar />
+      <Description />
 
       <Options
         textBtns={feedbackTyps}
